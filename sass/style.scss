@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css?family=Dokdo');
+
+@mixin btnStyle {
+    margin: 10px;
+    border: 3px solid #000;
+    background: linear-gradient(#aa3939, #aa6c39);
+    width: 250px;
+    height: 75px;
+    line-height: 75px;
+    font-size: 24px;
+    border-radius: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all .3s ease-in-out;
+    font-family: 'Dokdo', serif;
+    &:hover {
+        border-radius: 35px;
+        background: linear-gradient(#266, #2d882d);
+    }
+}
+
+body {
+    margin: 0 auto;
+    font-family: 'Dokdo', serif;
+}
+
+.container {
+    background: url(https://images.pexels.com/photos/1249214/pexels-photo-1249214.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+    background-size: 100% auto;
+    padding-top: 5%;
+    height: 100vh;
+    .button-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover > * {
+            opacity: .5;
+            transition: all .3s ease-in-out;
+            &:hover {
+                opacity: 1;
+            }
+        }
+        button {
+            @include btnStyle;
+        }
+    }
+    div {
+        margin: 0 auto;
+        text-align: center;
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    .result {
+        width: 550px;
+        height: 150px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        span {
+            font-size: 48px;
+            font-weight: 750;
+        }
+    }
+    .newgame-container {
+        padding-top: 15%;
+        button {
+            @include btnStyle;
+        }
+    }
+}
+
+.overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	
+	&.show {
+		display: block;
+	}
+}
+
+.modal {
+	background: beige;
+    width: 400px;
+    height: 400px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    overflow: auto;
+	p {
+        font-size: 16px;
+    }
+	.close {
+		position: absolute;
+		right: 0;
+		top: 0;
+		padding: 5px;
+		color: #000;
+		text-decoration: none;
+	}
+	
+	header {
+		font-size: 20px;
+		line-height: 30px;
+		min-height: 30px;
+		font-weight: bold;
+		padding: 0 30px;
+	}
+
+	.content {
+		min-height: 30px;
+		padding: 5px 30px;
+    }
+    button {
+        @include btnStyle;
+    }
+}
+
+input {
+    width: calc(100% - 60px);
+    height: 25px;
+    margin: 25px;
+    border-radius: 15px;
+    &:first-of-type {
+        margin-top: 15%;
+    }
+}

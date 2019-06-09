@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+  <section class="container">
+    <div class="button-container">
+      <button id="1" class="player-move">Paper</button>
+      <button id="2" class="player-move">Scissors</button>
+      <button id="3" class="player-move">Rock</button>
+    </div>
+    <div id="output">
+
+    </div>
+    <div class="overlay" id="modal-overlay">
+      <div class="modal" id="modal">
+        <a href="#" class="close">x</a>
+        <div id="gameResult">
+
+        </div>
+      </div>
+    </div>
+
+
+    <div id="result" class="result">
+      <span id="playerResult"></span>
+      <p>Player</p>
+      <span id="pcResult"></span>
+      <p>PC</p>
+
+    </div>
+
+    <div class="newgame-container">
+      <button id="newGame" class="newgameBtn">New Game</button>
+    </div>
+    <div class="overlay" id="modal-overlay2">
+      <div class="modal" id="ng-modal">
+        <a href="#" class="close">x</a>
+        <input type="text" id="player-name" placeholder="YOUR NAME">
+        <input type="number" id="rounds-number" placeholder="How many rounds do You want to play?">
+        <button id="start-game">START</button>
+      </div>
+    </div>
+  </section>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
